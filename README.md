@@ -20,9 +20,5 @@ Both losses (MLM and NSP) should be combined (e.g. summed) to train the model jo
 Dataset: WikiText-2 from HuggingFace 
 
 Resources that might help
-BERT Paper: BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding (Devlin et al., 2018)
-Transformer Paper: Attention Is All You Need (Vaswani et al., 2017)
-The Illustrated Transformer by Jay Alammar – visual guide to how transformers work. [The Illustrated Transformer – Jay Alammar – Visualizing machine learning one concept at a time.]
-The Illustrated BERT, ELMo, and co. – intuition and visuals for contextual embeddings. [The Illustrated BERT, ELMo, and co. (How NLP Cracked Transfer Learning) – Jay Alammar – Visualizing machine learning one concept at a time.]
-BERT Explained: State of the art language model for NLP (Ruder Blog). [BERT Explained: SOTA Language Model For NLP [Updated]]
-[Fine-Tuning BERT: A Practical Guide | by why amit | Medium]
+BERT Paper: [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding (Devlin et al., 2018)](https://arxiv.org/abs/1810.04805)
+ 
