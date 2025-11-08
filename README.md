@@ -1,1 +1,28 @@
-# NLP
+# BERT from Scratch 
+
+Model Implementation (from scratch):
+
+Multi-layer Transformer encoder with self-attention and feed-forward networks (you can choose a smaller number of layers/hidden size than the full BERT_base to suit time and computing resources).
+Input embeddings that sum token embeddings, position embeddings, and segment embeddings (as in BERT, segment embeddings distinguish sentence A vs B for the NSP task)
+Special tokens [CLS] (classification token at start) and [SEP] (separator token at end of sentence or between sentence pairs).
+Output heads:
+MLM head – predict masked tokens.
+NSP head – binary classifier on [CLS] for next-sentence prediction.
+ Use standard layers (e.g. nn.Linear) but no prebuilt BERT.
+ Tokenization via existing WordPiece libraries is allowed.
+
+   Training Procedure:Train jointly on-
+Masked Language Modelling: For each input sequence, randomly mask out a small percentage of tokens (e.g. 15%) and have the model predict the masked tokens’ identities. Use the strategy described in the paper: e.g. 80% of the time replace with [MASK] , 10% with a random word, 10% leave unchanged (to bias against the model just learning the mask token.
+Next sentence prediction:  Create input sequence pairs for training. Some pairs are positive examples where the second sentence truly follows the first from the original text, and others are negative examples where the second sentence is chosen randomly from the corpus (not actually the next sentence).
+
+Both losses (MLM and NSP) should be combined (e.g. summed) to train the model jointly, as in the paper . You will need to iterate through the corpus to generate these training examples. Tip: It’s often easiest to prepare the corpus as segmented sentences. Take consecutive sentence pairs as positive examples, and for each positive pair create a negative pair by pairing the first sentence with a random second sentence from the corpus.
+
+Dataset: WikiText-2 from HuggingFace 
+
+Resources that might help
+BERT Paper: BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding (Devlin et al., 2018)
+Transformer Paper: Attention Is All You Need (Vaswani et al., 2017)
+The Illustrated Transformer by Jay Alammar – visual guide to how transformers work. [The Illustrated Transformer – Jay Alammar – Visualizing machine learning one concept at a time.]
+The Illustrated BERT, ELMo, and co. – intuition and visuals for contextual embeddings. [The Illustrated BERT, ELMo, and co. (How NLP Cracked Transfer Learning) – Jay Alammar – Visualizing machine learning one concept at a time.]
+BERT Explained: State of the art language model for NLP (Ruder Blog). [BERT Explained: SOTA Language Model For NLP [Updated]]
+[Fine-Tuning BERT: A Practical Guide | by why amit | Medium]
