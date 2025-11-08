@@ -1,3 +1,24 @@
+##  Instructions to Run and Train the Model
+
+###  **To Test the Model**
+1. Download the pre-trained model file.  
+2. Run the following command in your terminal:
+   ```bash
+   python test_mini_bert.py
+   ```
+
+---
+
+###  **To Train the Model**
+Run the following command:
+```bash
+python BERT_from_scratch.py --device cuda --epochs 2 --batch_size 16
+```
+
+> 💡 **Tip:**  
+> If you don’t have a CUDA-compatible GPU, replace `--device cuda` with `--device cpu`.
+
+
 # BERT from Scratch 
 
 Model Implementation (from scratch):
