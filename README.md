@@ -19,6 +19,7 @@ Both losses (MLM and NSP) should be combined (e.g. summed) to train the model jo
 
 Dataset: WikiText-2 from HuggingFace 
 
-Resources that might help
+Resources that might help  
+
 BERT Paper: [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding (Devlin et al., 2018)](https://arxiv.org/abs/1810.04805)
  
