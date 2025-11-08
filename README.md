@@ -1,3 +1,5 @@
+# BERT from Scratch 
+
 ##  Instructions to Run and Train the Model
 
 ###  **To Test the Model**
@@ -19,9 +21,9 @@ python BERT_from_scratch.py --device cuda --epochs 2 --batch_size 16
 > If you don’t have a CUDA-compatible GPU, replace `--device cuda` with `--device cpu`.
 
 
-# BERT from Scratch 
 
-Model Implementation (from scratch):
+
+##Model Implementation (from scratch):
 
 Multi-layer Transformer encoder with self-attention and feed-forward networks (you can choose a smaller number of layers/hidden size than the full BERT_base to suit time and computing resources).
 Input embeddings that sum token embeddings, position embeddings, and segment embeddings (as in BERT, segment embeddings distinguish sentence A vs B for the NSP task)
