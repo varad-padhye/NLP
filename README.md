@@ -8,6 +8,8 @@
    ```bash
    python test_mini_bert.py
    ```
+📦 Download the trained model:
+[mini_bert.pt (Google Drive)](https://drive.google.com/file/d/1gE2NX_2Y4Ec8YNL25ssOwdev9tn5Xymd/view?usp=sharing)
 
 ---
 
